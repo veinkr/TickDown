@@ -38,7 +38,7 @@ class SinaTickDown(TickDown):
             t1 = datetime.now()
             if self.stock_a_hour(t1):  # 判断A股时间段
                 try:
-                    stkdata = self.formatdata(self.tick_dl(if_thread=False))  # 下载数据
+                    stkdata = self.formatdata(self.tick_dl(if_thread=True))  # 下载数据
                     with open(self.todaycsvpath, mode='a') as file_today:  # 打开文件
                         writecnt = 0
                         t3 = datetime.now()
