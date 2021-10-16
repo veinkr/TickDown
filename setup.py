@@ -29,7 +29,7 @@ class CleanCommand(Command):
 
 
 def get_version():
-    ret = os.popen(f"pip list |grep {whl_name}").read()
+    ret = os.popen(f"pip list |grep {whl_name[:4]} | grep {whl_name[-4:]}").read()
     if len(ret) > 1:
         return round(float(ret.split(" ")[-1].strip()) + 0.1, 1)
     else:
