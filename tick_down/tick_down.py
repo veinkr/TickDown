@@ -97,7 +97,8 @@ class TickDown(metaclass=ABCMeta):
         if not os.path.exists(path):
             os.makedirs(path)
         shutil.move(self.todaycsvpath, os.path.join(path, self.todaycsvname))
-        shutil.move(self.today7zpath, os.path.join(path, self.today7zname))
+        if os.path.exists(self.today7zpath):
+            shutil.move(self.today7zpath, os.path.join(path, self.today7zname))
 
     def stocklist(self):
         """查询所有方法获取到股票清单"""
