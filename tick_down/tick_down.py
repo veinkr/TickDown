@@ -130,7 +130,7 @@ class TickDown(metaclass=ABCMeta):
 
     @classmethod
     def stocklist_akshare(cls):
-        pass
+        return []
 
     @classmethod
     def stocklist_astock(cls):
