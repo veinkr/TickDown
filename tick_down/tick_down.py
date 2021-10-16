@@ -108,7 +108,7 @@ class TickDown(metaclass=ABCMeta):
                     break
                 except Exception as err:
                     self.send_message(f"获取{method.__name__}股票清单失败，请查看原因，{err}"[:100])
-
+        self.stock_list = list(set(self.stock_list))
         self.stock_code = [",".join(self.stock_list[i: i + self.max_num]) for i in
                            range(0, len(self.stock_list) + 1, self.max_num)]
         self.stock_code = [i for i in self.stock_code if i != '' and i is not None]
