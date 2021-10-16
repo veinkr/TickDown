@@ -86,7 +86,7 @@ class TickDown(metaclass=ABCMeta):
         # run before
         self.if_trade(trade_date_bypass=trade_date_bypass)
         # 发送启动信息
-        self.send_message("下载{self.tick_source}数据 -> 启动")  # 发送启动消息
+        self.send_message(f"下载{self.tick_source}数据 -> 启动")  # 发送启动消息
 
     def compress(self, zip_loc='7za', password='1234'):
         """7z压缩"""
