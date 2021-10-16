@@ -60,3 +60,5 @@ class SinaTickDown(TickDown):
             else:
                 print("relax 10s , localtime: %s" % datetime.now())  # 未退出前休息
                 sleep(10)
+
+        self.send_message(f"下载{self.tick_source}数据 -> 完成")  # 发送完成消息
