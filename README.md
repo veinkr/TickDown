@@ -5,7 +5,7 @@ A股tick下载，自动判断交易日历，获取全市场level1数据
 ### Install
 
 ```shell
-pip install git+https://github.com/vein-yang/TickDown.git
+pip install git+https://github.com/veinkr/TickDown.git
 ```
 
 ### 依赖项
